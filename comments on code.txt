@@ -1,0 +1,17 @@
+
+Hello Sir, Hope you are doing great.
+--------------------------
+Overall code was good, structured and as per MVC rules, but few line of code were there, 
+so I minimized those by using ternary operation and made that one line code.
+--------------------------
+Also there were some variables declared in class and defined in constructor like mailer and logger in repository, 
+but these variables were not used in rest of the methods, new objects of those classes in the methods were defined 
+instead of using those class variables. So I refactored those.
+--------------------------
+For testing the specific methods, we can use filters, like 
+
+What I used in my past, is to create a test class of some controllers of class, a class will be created automatically via php artisan make:test command,
+then we add the functionality in method with prefix of test_ and run test by following command:
+
+php artisan test --filter %somename_of_test_class%
+and then this will show the test fail or success with time of execution.
